@@ -56,9 +56,9 @@ for i in tqdm(range(len(min_rnk))):
         break
 
 
-# # IMPORTANT: set innodb_strict_mode = 0 in my.ini file in MySQL or run "SET GLOBAL innodb_strict_mode = 0;" in the shell before running the next cell
+# # IMPORTANT: set innodb_strict_mode = 0 in my.ini file in MySQL or run "SET GLOBAL innodb_strict_mode = 0;" in MYSQL shell before running the next cell
 
-# # DELETE DATABASE AND TABLE with SAME NAME BEFORE RUNNING BELOW CODE
+# # DELETE DATABASE AND TABLE FROM MYSQL DATABASE with SAME NAME BEFORE RUNNING BELOW CODE
 
 
 tableName   = str(disease_name)
