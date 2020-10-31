@@ -1,5 +1,5 @@
 # DDH-2020-T2PS07
-## Github repository for Drug Discovery Hackathon 2020 aming to solve problem statement 07 of track 2 \
+## Github repository for Drug Discovery Hackathon 2020 aming to solve problem statement 07 of track 2 
 ### **data_pipeline** 
 Folder contains a constructed python pipeline to download and update data from clinicaltrials.gov and to make it available for searching in a **mySQL database.** The folder has .py and .ipynb file, choose which ever you are confortable with. Kindly follow the instruction given in the code and also make sure you **do not** have any existing sql database of the same name in MYSQL. 
 ### **main_data.csv** 
