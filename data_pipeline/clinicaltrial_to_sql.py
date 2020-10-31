@@ -1,8 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[1]:
-
+# # install all the necessary libraries before running the program
 
 import pandas as pd
 from sqlalchemy import create_engine
@@ -59,34 +56,31 @@ for i in tqdm(range(len(min_rnk))):
         break
 
 
-# # set innodb_strict_mode = 0 in my.ini file in MySQL or run "SET GLOBAL innodb_strict_mode = 0;" in the shell before running the next cell
+# # IMPORTANT: set innodb_strict_mode = 0 in my.ini file in MySQL or run "SET GLOBAL innodb_strict_mode = 0;" in MYSQL shell before running the next cell
 
-# In[5]:
-
+# # DELETE DATABASE AND TABLE FROM MYSQL DATABASE with SAME NAME BEFORE RUNNING BELOW CODE
 
 
 tableName   = str(disease_name)
-
+# # Change "root" to your mysql username and "2486" with your mysql password
 sqlEngine = create_engine('mysql://root:2486@localhost:3306/clinicaltrials?charset=utf8')
 
 frame = df_covid.to_sql(tableName, sqlEngine, index=False, if_exists='replace')
 
 
-# In[ ]:
 
 
 
 
 
-# In[ ]:
+
+
 
 
 
 
 
 # # Faster way to get csv file but the data type may require more filtering of the data before uploading to SQL database (Uncomment the below code before running)
-
-# In[ ]:
 
 
 """disease_name = input("Enter the Disease name: \n")
@@ -110,7 +104,6 @@ df_new = work.rename(columns=lambda s: s.split('.')[-1])
 df_new1 = df_new.applymap(str)"""
 
 
-# In[ ]:
 
 
 
